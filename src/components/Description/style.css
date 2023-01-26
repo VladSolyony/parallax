@@ -1,0 +1,67 @@
+:root {
+  --sizeindex: calc(1vw + 1vh);
+  --transition: 5.75 cubic-bezier(.2, .6, 0, 1);
+}
+
+.description {
+  position: absolute;
+  font-size: calc(var(--sizeindex) * .8);
+  top: 45vh;
+  left: 5vw;
+  max-width: 24vw;
+  opacity: .9;
+  transform: rotate(-15deg);
+  animation: reverse .5s;
+}
+
+.description p {
+  opacity: .9;
+}
+
+.description-hidden {
+  opacity: 0;
+  position: absolute;
+  font-size: calc(var(--sizeindex) * .8);
+  top: 45vh;
+  left: 5vw;
+  max-width: 24vw;
+  transform: rotate(-15deg);
+  animation: mymove .5s;
+}
+
+.logo {
+  font-size: calc(var(--sizeindex) * 3.6);
+  font-weight: 900;
+  display: inline-block;
+  background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: reverse .5s;
+}
+
+@keyframes mymove {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reverse {
+  0% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: .5;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
